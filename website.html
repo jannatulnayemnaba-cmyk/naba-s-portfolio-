@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jannatul Nayem Naba | EEE Undergraduate Portfolio</title>
+<style>
+  :root {
+    --Bluish Green: #0b2545;
+    --blue: #1d4ed8;
+    --ink: #1b2a41;
+    --muted: #44546a;
+    --bg: #ffffff;
+    --tint: #eef3fb;
+    --line: #c5d1e4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--bg);
+    overflow-wrap: anywhere;
+  }
+  a { color: var(--green); text-underline-offset: 3px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    background: #fff;
+    color: var(--green);
+    padding: .6rem 1rem;
+    border: 2px solid var(--navy);
+    z-index: 10;
+  }
+  .skip-link:focus { top: 1rem; }
+
+  header.site-header { background: var(--navy); color: #fff; }
+  .site-header .inner {
+    max-width: 72rem; margin: 0 auto; padding: 1rem 1.25rem;
+    display: flex; flex-wrap: wrap; gap: .75rem 2rem;
+    align-items: center; justify-content: space-between;
+  }
+  .brand { font-weight: 700; font-size: 1.1rem; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
+  nav a { color: #fff; padding: .35rem 0; display: inline-block; font-weight: 600; }
+  nav a:focus-visible { outline-color: #fbbf24; }
+
+  main section { padding: 3.5rem 1.25rem; }
+  .wrap { max-width: 72rem; margin: 0 auto; }
+  section:nth-of-type(even) { background: var(--tint); }
+  h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.15; margin: 0 0 .5rem; color: var(--navy); }
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem); color: var(--navy);
+    margin: 0 0 1.5rem; padding-bottom: .5rem; border-bottom: 4px solid var(--blue);
+    display: inline-block;
+  }
+  h3 { font-size: 1.2rem; margin: 0 0 .5rem; color: var(--navy); }
+
+  .hero { padding-top: 4rem; }
+  .role { font-size: 1.25rem; font-weight: 600; margin: 0; }
+  .org { font-size: 1.1rem; color: var(--muted); margin: .25rem 0 1rem; }
+  .lead { max-width: 46rem; margin: 0 0 1.75rem; }
+  .button {
+    display: inline-block; background: var(--navy); color: #fff;
+    padding: .8rem 1.5rem; border-radius: 6px; font-weight: 700;
+    text-decoration: none; border: 2px solid var(--navy);
+  }
+  .button:hover { background: var(--blue); border-color: var(--blue); }
+
+  .grid { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .card { background: #fff; border: 1px solid var(--line); border-top: 6px solid var(--navy); border-radius: 8px; padding: 1.5rem; }
+  .card dl { margin: 1rem 0 0; }
+  .card dt { font-weight: 700; color: var(--navy); margin-top: .75rem; }
+  .card dd { margin: 0; }
+  .status { display: inline-block; font-size: .9rem; font-weight: 700; padding: .2rem .6rem; border: 2px solid var(--navy); border-radius: 4px; background: var(--tint); margin: 0 0 .75rem; }
+  .placeholder { font-style: italic; color: #7a3b00; background: #fff4e0; padding: 0 .3rem; border-radius: 3px; }
+
+  .skill-group { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 1.25rem 1.5rem; }
+  .skill-group ul { margin: 0; padding-left: 1.2rem; }
+  .skill-group li { margin: .3rem 0; }
+
+  .about p { max-width: 50rem; }
+  .about ul { padding-left: 1.2rem; max-width: 50rem; }
+  .about li { margin: .4rem 0; }
+
+  .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; max-width: 40rem; }
+  .contact-list li { background: #fff; border: 1px solid var(--line); border-left: 6px solid var(--blue); border-radius: 6px; padding: 1rem 1.25rem; }
+  .contact-list strong { display: block; color: var(--navy); }
+
+  footer { background: var(--navy); color: #fff; padding: 1.5rem 1.25rem; text-align: center; }
+
+  @media (min-width: 48rem) { main section { padding: 4.5rem 2rem; } .site-header .inner { padding: 1rem 2rem; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="inner">
+    <span class="brand">Jannatul Nayem Naba</span>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content" tabindex="-1">
+
+  <!-- ===== INTRODUCTION ===== -->
+  <section id="introduction" class="hero" aria-labelledby="intro-heading">
+    <div class="wrap">
+      <h1 id="intro-heading">Jannatul Nayem Naba</h1>
+      <p class="role">EEE Undergrad</p>
+      <p class="org">Brac University</p>
+      <p class="lead">
+        My work focuses on embedded systems firmware, PCB layout, robotics, and power systems engineering.
+        Browse my projects below to evaluate my technical work, then get in touch about research collaborations or engineering roles.
+      </p>
+      <a class="button" href="#projects">View Projects</a>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS (exactly two cards) ===== -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="wrap">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="grid">
+
+        <article class="card" aria-labelledby="project-1-title">
+          <h3 id="project-1-title">2025 NASA-Affiliated CanSat Competition (Team BRACU Diganta)</h3>
+          <p>Designed power budgets and integrated avionics sensors as part of the team's electronics sub-team.</p>
+          <dl>
+            <dt>Role</dt>
+            <dd>Electronics Sub-Team Member</dd>
+            <dt>Tools used</dt>
+            <dd>BNO080/BNO088 and MPU6050 IMUs, MS5611 barometer, BME280 environmental sensor, INA219/INA226 current monitors, NEO-M8N GNSS, SX1278 LoRa</dd>
+            <dt>Outcome</dt>
+            <dd>Secured 7th place globally.</dd>
+            <dt>Proof or supporting URL</dt>
+            <dd><span class="placeholder">[Add verified URL]</span> <!-- Replace with a verified link, then wrap it in an <a href="..."> element --></dd>
+          </dl>
+        </article>
+
+        <article class="card" aria-labelledby="project-2-title">
+          <h3 id="project-2-title">Intelligent Laboratory Safety System Prototype</h3>
+          <p>An ESP32-based real-time lab hazard monitor with multi-sensor weighted risk scoring, finite state machine (FSM) decision logic, and I2C status displays.</p>
+          <dl>
+            <dt>Role</dt>
+            <dd><span class="placeholder">[Add verified role]</span> <!-- Replace with verified role --></dd>
+            <dt>Tools used</dt>
+            <dd>ESP32, C/C++, PlatformIO, Wokwi, I2C displays</dd>
+            <dt>Outcome</dt>
+            <dd><span class="placeholder">[Add verified outcome]</span> <!-- Replace with verified outcome --></dd>
+            <dt>Proof or supporting URL</dt>
+            <dd><span class="placeholder">[Add verified URL]</span> <!-- Replace with a verified link, then wrap it in an <a href="..."> element --></dd>
+          </dl>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS (verified skills only) ===== -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="wrap">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="grid">
+        <div class="skill-group">
+          <h3>Programming and modeling</h3>
+          <ul><li>C</li><li>C++</li><li>Python</li><li>MATLAB</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Microcontrollers and hardware</h3>
+          <ul>
+            <li>STM32 (STM32F407VET6, STM32 BlackPill, bare-metal/HAL, ST-LINK/V2)</li>
+            <li>Teensy 4.1</li>
+            <li>ESP32 and ESP32-CAM</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Sensors and communication modules</h3>
+          <ul>
+            <li>BNO080/BNO088, MPU6050</li>
+            <li>MS5611, BME280</li>
+            <li>INA219/INA226</li>
+            <li>NEO-M8N GNSS, SX1278 LoRa</li>
+            <li>I2C, SPI, and UART peripherals</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>EDA, CAD, and simulation</h3>
+          <ul>
+            <li>EasyEDA</li>
+            <li>Altium Designer (multi-layer PCB layout, schematic capture, LCSC footprint selection)</li>
+            <li>SOLIDWORKS (3D CAD)</li>
+            <li>PSpice, Wokwi</li>
+            <li>ROS2 (Ubuntu 22.04 LTS)</li>
+            <li>VS Code (PlatformIO), Arduino IDE</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Core EEE coursework</h3>
+          <ul>
+            <li>Microcontrollers</li>
+            <li>Control Systems</li>
+            <li>Power System Analysis (per-unit systems, reactance diagrams, power factor correction)</li>
+            <li>Digital Logic Design</li>
+            <li>Signals and Systems</li>
+            <li>Introduction to Communication Engineering</li>
+            <li>Electromagnetics</li>
+            <li>Project Management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="wrap">
+      <h2 id="about-heading">About</h2>
+      <p>
+        I am a B.Sc. student in Electrical and Electronic Engineering at BRAC University in Dhaka, Bangladesh,
+        with 77 of 136 credits completed. My focus areas are embedded systems architecture, bare-metal/HAL firmware,
+        multi-layer PCB design, autonomous robotics, and power systems engineering.
+      </p>
+      <h3>Affiliations and activities</h3>
+      <ul>
+        <li>Associate of Research &amp; Publication, IEEE BRAC University Student Branch Chapter</li>
+        <li>Official University Chapter Member, Shoktikonna Network</li>
+        <li>Former Campus Ambassador, Robo Tech Valley</li>
+        <li>Participant, NASA Space Apps Challenge 2026</li>
+        <li>Participant, IEEE RAS IUT SBC Online PCB Design Workshop and Contest</li>
+      </ul>
+      <h3>Other project work</h3>
+      <ul>
+        <li><strong>HydroWatch (underground water pipeline leak monitoring):</strong> collaborated on the system engineering report and communication management plan for a pipeline leak detection framework.</li>
+        <li><strong>Campus E-Waste Collection &amp; Student Survey Initiative:</strong> designed and executed an electronic waste collection drive and student awareness survey at BRAC University.</li>
+      </ul>
+      <p><span class="placeholder">[Add verified additional background or research interests]</span> <!-- Optional: add more verified background here --></p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT (no form) ===== -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <h2 id="contact-heading">Contact</h2>
+      <p>For research collaborations or engineering roles, please reach out using the details below.</p>
+      <ul class="contact-list">
+        <li>
+          <strong>Email</strong>
+          <span class="placeholder">[Add verified email]</span> <!-- Replace with email, then wrap in <a href="mailto:..."> -->
+        </li>
+        <li>
+          <strong>Phone</strong>
+          <a href="tel:+8801886734771">01886734771</a>
+        </li>
+        <li>
+          <strong>LinkedIn</strong>
+          <span class="placeholder">[Add verified URL]</span> <!-- Replace with LinkedIn profile URL, then wrap in <a href="..."> -->
+        </li>
+        <li>
+          <strong>Additional link (optional, such as GitHub or Google Scholar)</strong>
+          <span class="placeholder">[Add verified URL]</span> <!-- Replace or delete this item -->
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; Jannatul Nayem Naba</p>
+</footer>
+</body>
+</html>
